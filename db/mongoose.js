@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 mongoose.connect(config.MONGODB + "watchlist", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useFindAndModify: false
 });
 
 const db = mongoose.connection;
