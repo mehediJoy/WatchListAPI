@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const seriesSchema = new mongoose.Schema({
+  userid: {
+    type: String,
+    required: true
+  },
   name: {
     type: String,
     required: true,
@@ -16,4 +20,4 @@ const seriesSchema = new mongoose.Schema({
 });
 
 const Series = mongoose.model("Series", seriesSchema);
-module.exports = { Series };
+module.exports = Series;
